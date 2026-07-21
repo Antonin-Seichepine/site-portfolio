@@ -1,7 +1,6 @@
 # Redirections 301 des anciennes URLs .html vers les URLs propres
 # (voir commit 51f8c4e — restructuration en dossier + index.html)
 <IfModule mod_alias.c>
-  Redirect 301 /index.html /
   Redirect 301 /apropos.html /apropos/
   Redirect 301 /projets.html /projets/
   Redirect 301 /services.html /services/
