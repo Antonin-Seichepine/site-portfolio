@@ -1,3 +1,10 @@
+# Une seule version publique : toutes les requêtes HTTP passent en HTTPS.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^ https://portfolio.anton1.fr%{REQUEST_URI} [R=301,L,NE]
+</IfModule>
+
 # Redirections 301 des anciennes URLs .html vers les URLs propres
 # (voir commit 51f8c4e — restructuration en dossier + index.html)
 <IfModule mod_alias.c>
